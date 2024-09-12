@@ -11,7 +11,7 @@
   
 (userId, password)  
   
-2. 데이터베이스의 user 테이블에서 userId에 해당하는 유저 레코드 조회  
+2. 데이터베이스의 nurses 테이블에서 userId에 해당하는 유저 레코드 조회  
 2.1 만약 유저 레코드가 존재하지 않으면 'SF' 응답 처리  
 2.2 만약 데이터베이스 작업 중 에러가 발생하면 'DBE' 응답 처리  
   
@@ -85,11 +85,11 @@
 
 (name, userId, password, telNumber, authNumber)
 
-2. 데이터베이스의 user 테이블에서 userId에 해당하는 유저 레코드 조회  
+2. 데이터베이스의 nurses 테이블에서 userId에 해당하는 유저 레코드 조회  
 2-1. 만약 존재하는 userId이면 'DI'(Duplicated Joining Verification Information) 응답 처리  
 2-2. 만약 데이터베이스 작업 중 에러가 발생하면 'DBE' 응답 처리
 
-3. 데이터베이스의 user 테이블에서 telNumber에 해당하는 유저 레코드 조회  
+3. 데이터베이스의 nurses 테이블에서 telNumber에 해당하는 유저 레코드 조회  
 3-1. 만약 존재하는 telNumber이면 'DT' 응답 처리  
 3-2. 만약 데이터베이스 작업 중 에러가 발생하면 'DBE' 응답 처리
 

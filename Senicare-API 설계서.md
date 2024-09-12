@@ -103,7 +103,7 @@ HTTP/1.1 500 Internal Server Error
 Content-Type: application/json;charset=UTF-8
 
 {
-  "code": "TF",
+  "code": "TCF",
   "message": "Token creation failed."
 }
 ```
