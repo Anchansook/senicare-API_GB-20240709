@@ -19,7 +19,7 @@
 3.1 만약 비밀번호가 서로 일치하지 않으면 'SF' 응답 처리
 
 4. JWT로된 accessToken 생성
-4.1 만약 accessToken 생성 중 에러가 발생하면 'TF' 응답 처리
+4.1 만약 accessToken 생성 중 에러가 발생하면 'TCF' 응답 처리
 
 5. 'SU' 응답 처리 (accessToken, expiration 데이터가 포함되어있음)  
 
