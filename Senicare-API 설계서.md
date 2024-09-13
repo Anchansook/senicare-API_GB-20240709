@@ -504,3 +504,42 @@ Content-Type: application/json;charset=UTF-8
   "message": "Database error."
 }
 ```
+
+#### - SNS 회원가입 및 로그인  
+  
+##### 설명
+
+클라이언트는 OAuth 인증서버를 입력하여 요청하고 해당하는 Redirect 응답을 받습니다. 회원가입이 되어있는 사용자의 경우 쿼리 매개변수로 접근 토큰과 토큰 만료 기간을 반환하며 회원가입이 되어있지 않은 사용자의 경우 쿼리 매개변수로 sns 아이디와 해당하는 sns 서비스의 이름을 반환합니다.  
+
+- method : **GET**  
+- end point : **/sns-sign-in/{registerId}**  
+
+##### Request
+
+###### Request Body
+
+| name | type | description | required |
+|---|:---:|:---:|:---:|
+| registerId | String | 사용 SNS (카카오: 'kakao', 네이버: 'naver') | O |
+
+###### Example
+
+```bash
+curl -v -X POST "http://localhost:4000/api/v1/auth/sns-sign-in/{kakao}" \
+```
+
+##### Response
+
+###### Example
+
+**응답 성공 (회원 O)**
+```bash
+HTTP/1.1 302 Found
+Location: http://localhost:3000/sns-success?accessToken=${accessToken}&expiration=36000
+```
+
+**응답 성공 (회원 X)**
+```bash
+HTTP/1.1 302 Found
+Location: http://localhost:3000/auth?snsId=${snsId}&joinPath=${joinPath}
+```
