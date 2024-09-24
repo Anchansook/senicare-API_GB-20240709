@@ -1214,7 +1214,7 @@ Tool 모듈은 모두 인증이 필요합니다.
 ###### Example
 
 ```bash
-curl -v -X POST "http://localhost:4000/api/v1/tool" \
+curl -v -X POST "http://localhost:4000/api/v1/customer" \
  -h "Authorization=Bearer XXXX" \
  -d "profileImage=https://~~" \
  -d "name=홍길동" \
